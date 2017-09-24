@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Education in Kenya</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+  <link href='https://api.mapbox.com/mapbox-assembly/v0.16.0/assembly.min.css' rel='stylesheet'>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <link href='css/styles.css' rel='stylesheet' />
+</head>
+
+<body>
+
+  <div class='grid'>
+    <div class='col col--12 col--3-ml px12 pt12 viewport-third viewport-full-ml'>
+      <div class='h-full scroll-auto'>
+        <h1 class='txt-xl mb6'>Primary School Education in Kenya</h1>
+        <p>This map shows primary school enrollment in Kenyan counties. Enrollment numbers are provided for grades 1 through 8 and broken down by gender.</p>
+        <br>
+        <div class=txt-bold><a href="https://creativecommons.org/2014/10/16/school-of-open-africas-launch-and-future/" target="_blank">School of Open Kenya</a></div>
+        <img src="images/kenya-school.jpg" alt="Kenya School">
+        <div class='txt-s txt-em'>Attribution: <a class=link href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></div>
+        <h2 class='txt-l mt18 mb12'>About Education in Kenya</h2>
+        <div class='txt-ul'>
+          <div class='txt-li'>Since 1985, public education in Kenya has been based on an 8-4-4 system, with eight years of primary education, 4 years of secondary education and 4 years of university education</div>
+          <div class='txt-li'>Primary education in Kenya begins at age 5 to 7 after completion of a year of kindergarten</div>
+          <div class='txt-li'>The school year begins in January and ends in November</div>
+          <div class='txt-li'>At the end of Standard 8, pupils sit for the Kenya Certificate of Primary Education examination</div>
+          <div class='txt-li'>5% of children are not enrolled in school and the problem is far worse in particular regions</div>
+          <div class='txt-li'>About 15% of students are absent on a given day, with much higher absenteeism in certain districts</div>
+        </div>
+        <div class='txt-s txt-em my12'>Source: <a class='link' href="https://en.wikipedia.org/wiki/Education_in_Kenya" target="_blank">Wikipedia</a></div>
+        <footer class='mt12 bg-gray-faint txt-s'>
+          <ul>
+            <li>Explore the raw <a class='link' href="http://icta-kenyaopendata.opendata.arcgis.com/datasets/national-boys-and-girls-enrollments-per-class-for-primary-school-education" target="_blank">data</a> from the Kenya National Bureau of Statistics
+              <li>Map authored by <a class='link' href="http://andreaparr.github.io" target="_blank">Andrea Parr</a></li>
+              </p>
+        </footer>
+      </div>
+    </div>
+    <div class='col col--12 col--9-ml h180 h-full-ml'>
+      <div id="map" class='viewport-twothirds viewport-full-ml'></div>
+
+
+      <!-- grade level -->
+
+      <div id='grade' class='w120 bg-lighten75 border border--white round-ml px12'></div>
+
+      <!-- ui slider -->
+      <div id='slider' class='range w240 bg-lighten75 border border--white round-ml px12'>
+        <input type='range' min="1" , max="8" , value="1" , step="1" class="slider" />
+      </div>
+
+      <!-- legend -->
+      <div id='legend' class='bg-lighten75 round-ml px18 py12'>
+        <h3 class='txt-bold mb12 w-full wmax180'>Number of <span class="girls">girls</span> and <span class="boys">boys</span> enrolled</h3>
+        <div class='legend-circles relative w180 wmax180'>
+          <div class="legend-large border border--gray-dark absolute"></div>
+          <div class="legend-small border border--gray-dark absolute"></div>
+          <div class="legend-large-label txt-m absolute"></div>
+          <div class="legend-small-label txt-m absolute"></div>
+        </div>
+      </div>
+
+
+      <!-- Infobox -->
+      <div id='info' class='py6 px12 bg-white border border--gray-light round absolute wmax200 none'>
+        <p>County: <span></span></p>
+        <p class='girls'>girls <span></span>: <span class='txt-l txt-bold'></span></p>
+        <p class='boys'>boys <span></span>: <span class='txt-l txt-bold'></span></p>
+        <hr class='txt-hr'>
+        <p class='my6'>trend: grades 1 &ndash; 8</p>
+        <p class='mb6'><span class='girlspark'></span></p>
+        <p><span class='boyspark'></span></p>
+      </div>
+
+      <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.16.0/assembly.js"></script>
+      <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+      <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+      <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+      <script src='js/app.js'></script>
+
+</body>
+
+</html>

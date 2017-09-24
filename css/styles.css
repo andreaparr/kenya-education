@@ -1,0 +1,25 @@
+/* custom CSS rules */
+body {
+  font-family: "Work Sans", sans-serif;
+  }
+.legend-large, .legend-small {
+    border-radius: 50%;
+}
+hr.small, hr.large {
+    width: 83px;
+    position: absolute;
+    top: -8px;
+    left: 55px;
+    border: 1px solid #313131;     /* overwrite assembly.css rule */
+    margin-top: 8px;            /* overwrite assembly.css rule */
+}
+.boys {
+    color: #6E77B0;
+}
+
+.girls {
+    color: #D96D02;
+}
+ul {
+    list-style-position: inside;
+}
