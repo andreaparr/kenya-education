@@ -4,7 +4,7 @@
   L.mapbox.accessToken = 'pk.eyJ1IjoiYW5kcmVhcnBhcnIiLCJhIjoiY2o2NGJrODB0MG0weTJxbnp1M2h2cWppdyJ9.O4620rmp32gJntwavWnlaQ';
 
   // create the Leaflet map using mapbox.light tiles
-  var map = L.mapbox.map('map', 'mapbox.dark', {
+  var map = L.mapbox.map('map', 'mapbox.dark-v10', {
     zoomSnap: .1,
     center: [-.23, 37.8],
     zoom: 7,
